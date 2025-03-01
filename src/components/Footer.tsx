@@ -13,7 +13,7 @@ const Footer = () => {
                 <span className="text-white font-bold text-sm">TF</span>
               </div>
               <span className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500">
-                TokenForge
+                SPLForge
               </span>
             </div>
 

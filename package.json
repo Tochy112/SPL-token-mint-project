@@ -21,6 +21,7 @@
     "cloudinary": "^2.5.1",
     "dotenv": "^16.4.7",
     "framer-motion": "^12.4.7",
+    "lucide-react": "^0.477.0",
     "next": "15.2.0",
     "next-cloudinary": "^6.16.0",
     "nft.storage": "^7.2.0",
