@@ -205,7 +205,7 @@ const TokenMintForm = () => {
   );
 
   return (
-    <div>
+    <div className="mx-4">
       <motion.div
         className="max-w-2xl mx-auto bg-gray-800/50 backdrop-blur-lg rounded-2xl border border-purple-500/20 p-8 shadow-lg"
         initial={{ opacity: 0, y: 20 }}
