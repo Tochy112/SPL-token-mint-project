@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
+import { WalletConnectProvider } from "@/components/WalletConnectProvider";
+import Header from "@/components/Header";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["200", "300", "400"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +25,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montserrat.className} antialiased`}
       >
-        {children}
+        <div suppressHydrationWarning={true}>
+          <WalletConnectProvider>
+            <Header />
+            <ToastContainer />
+            {children}
+          </WalletConnectProvider>
+        </div>
       </body>
     </html>
   );
